@@ -1,8 +1,0 @@
-make.exe --dry-run --always-make --keep-going --print-directory
-make.exe: Entering directory `c:/Users/LENOVO/Desktop/embedded dwnld/Embedded-sys-main'
-# Create directory to store the built files
-mkdir Build
-# Compile the code and generate the ELF file
-avr-gcc.exe -g -Wall -Os -mmcu=atmega328 -DF_CPU=16000000UL -I inc project_main.c src/Activity_1.c src/Activity_2.c src/Activity_3.c src/Activity_4.c -o Build\Activities.elf
-make.exe: Leaving directory `c:/Users/LENOVO/Desktop/embedded dwnld/Embedded-sys-main'
- 
