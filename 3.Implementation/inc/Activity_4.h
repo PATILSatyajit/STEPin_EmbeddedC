@@ -1,18 +1,19 @@
+/**
+ * @file Activity_4.h
+ * @author Satyajit Patil
+ * @brief To display output temparature
+ * @version 0.1
+ * @date 2021-09-16
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #ifndef ACTIVITY4_H_INCLUDED
 #define ACTIVITY4_H_INCLUDED
-/** \brief initialize USART
- *
- * \param ubrr_value
- *
- */
 
 void USARTInit(uint16_t ubrr_value);
-/** \brief send the the modified temperature value to USART 
- *
- * \param temp_value
- */
 
 void USARTWrite(char temp_value);
 
 char temp_disp();
-#endif // ACTIVITY4_H_INCLUDED
+#endif 

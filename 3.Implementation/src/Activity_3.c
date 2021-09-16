@@ -1,3 +1,13 @@
+/**
+ * @file Activity_3.c
+ * @author Satyajit Patil
+ * @brief Timer configuration and PWM output
+ * @version 0.1
+ * @date 2021-09-16
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -15,27 +25,27 @@ void pwm_output(void)
 
     if((ReadADC(0)>=0) && (ReadADC(0)<=209)){
 
-        OCR1A = 205; //20% duty cycle
+        OCR1A = 205; 
         _delay_ms(20);
     }
     else if((ReadADC(0)>=210) && (ReadADC(0)<=509)){
 
-        OCR1A = 410; //40% duty cycle
+        OCR1A = 410; 
         _delay_ms(20);
     }
     else if((ReadADC(0)>=510) && (ReadADC(0)<=709)){
 
-        OCR1A = 717;//70% duty cycle
+        OCR1A = 717;
         _delay_ms(20);
     }
     else if((ReadADC(0)>=710) && (ReadADC(0)<=1024)){
 
-        OCR1A = 973; //95% duty cycle
+        OCR1A = 973; 
         _delay_ms(20);
     }
     else
     {
-        OCR1A = 0; //0% output
+        OCR1A = 0; 
     }
 
 }

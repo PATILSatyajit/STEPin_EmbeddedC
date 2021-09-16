@@ -1,4 +1,13 @@
-//main application
+/**
+ * @file project_main.c
+ * @author Satyajit Patil
+ * @brief main code
+ * @version 0.1
+ * @date 2021-09-16
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <avr/io.h>
 #include<util/delay.h>
 #include "Activity_1.h"
@@ -10,8 +19,8 @@ int main(void)
 {
     initialise();
      InitADC();
-    USARTInit(103);//Initialize ports for USART
-    uint16_t tempdata=0;// temperature value
+    USARTInit(103);
+    uint16_t tempdata=0;
 
     while(1)
     {
@@ -25,7 +34,7 @@ int main(void)
             _delay_ms(200);
             
             tempdata=temp_disp();
-            USARTWrite(tempdata);//send data to USART
+            USARTWrite(tempdata);
             _delay_ms(20);
         }
         
@@ -33,7 +42,8 @@ int main(void)
         {
            PORTB&=~(1<<PB0);
           _delay_ms(200);
-          OCR1A = 0; //PWM wave 0
+          OCR1A = 0; 
+          
         }
     }
     return 0;

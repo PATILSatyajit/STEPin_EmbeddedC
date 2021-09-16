@@ -1,3 +1,13 @@
+/**
+ * @file Activity_4.c
+ * @author Satyajit Patil
+ * @brief USART code to display temparature
+ * @version 0.1
+ * @date 2021-09-16
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #include <avr/io.h>
 #include "Activity_2.h"
 #include "Activity_3.h"
